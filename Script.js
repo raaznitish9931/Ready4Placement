@@ -1,11 +1,15 @@
 function toggleSection(sectionId) {
+    const allSections = document.querySelectorAll('.syllabus-section');
     const selectedSection = document.getElementById(sectionId);
+
+    allSections.forEach(section => {
+        if (section !== selectedSection) {
+            section.style.display = 'none';
+        }
+    });
+
     if (selectedSection) {
-        selectedSection.style.display =
-            selectedSection.style.display === "none" ||
-            selectedSection.style.display === ""
-                ? "block"
-                : "none";
+        selectedSection.style.display = (selectedSection.style.display === 'none' || selectedSection.style.display === '') ? 'block' : 'none';
     }
 }
 
@@ -221,6 +225,7 @@ function getCompanyContent(company) {
                 <h4><span class="round-box">Round - 3</span> HR Interview</h4>
                 <ul>
                     <li><strong style="color: black; font-weight: 600;">General HR questions</strong></li>
+                    <li><strong style="color: black; font-weight: 600;">Discussion on career goals</strong></li>
                 </ul>
             `;
         case "saplabs":
@@ -261,20 +266,7 @@ function getCompanyContent(company) {
             `;
         default:
             return `
-                <h4><span class="round-box">Round - 1</span></h4>
-                <ul>
-                    <li><strong style="color: black; font-weight: 600;">Cognitive Ability</strong>: 50 Ques</li>
-                    <li><strong style="color: black; font-weight: 600;">Technical Ability</strong>: 40 Ques</li>
-                    <li><strong style="color: black; font-weight: 600;">Coding</strong>: 2 Ques</li>
-                </ul>
-                <h4><span class="round-box">Round - 2</span></h4>
-                <ul>
-                    <li><strong style="color: black; font-weight: 600;">Communication Assessment</strong>: 20-25 Ques</li>
-                </ul>
-                <h4><span class="round-box">Round - 3</span></h4>
-                <ul>
-                    <li><strong style="color: black; font-weight: 600;">Interview</strong> (Online)</li>
-                </ul>
+                <h4>Details not available for this company.</h4>
             `;
     }
 }
@@ -287,6 +279,16 @@ function closeCompanyDetails() {
     companyDetailsContainer.style.display = "none";
     companyDetailsDiv.style.display = "none";
 }
+
+const magnetFollower = document.getElementById('magnet-follower');
+
+document.addEventListener('mousemove', (e) => {
+    if (magnetFollower) {
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+        magnetFollower.style.transform = `translate(${mouseX - 15}px, ${mouseY - 15}px)`;
+    }
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     const companyDetailsContainer = document.getElementById(
