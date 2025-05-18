@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready4Placement</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div id="main">
+
+        <div id="navbar">
+            <div id="logo">
+                <img src="LNCT-Logo.webp" alt="LNCT Logo">
+            </div>
+            <div id="tags">
+                <a href="#page1">Home</a>
+                <a href="#page2">Syllabus</a>
+                <a href="#page3">Company</a>
+                <a href="#page4">About</a>
+            </div>
+        </div>
+
+        <div id="page1">
+            <h1>Welcome to the Placement Preparation Portal</h1>
+            <p>Your one-stop solution for the complete placement preparation syllabus.</p>
+        </div>
+
+        <div id="page2">
+            <h1>General Syllabus for All Companies</h1>
+
+            <div id="syllabus-main">
+                <button class="syllabus-button" onclick="toggleSection('quantitative')"><i class="fas fa-calculator"></i> Quantitative Aptitude</button>
+                <button class="syllabus-button" onclick="toggleSection('verbal')"><i class="fas fa-language"></i> Verbal Ability</button>
+                <button class="syllabus-button" onclick="toggleSection('logical')"><i class="fas fa-puzzle-piece"></i> Logical Reasoning</button>
+                <button class="syllabus-button" onclick="toggleSection('core-technical')"><i class="fas fa-microchip"></i> Core Technical Subjects</button>
+                <button class="syllabus-button" onclick="toggleSection('coding')"><i class="fas fa-code"></i> Coding</button>
+            </div>
+
+            <div class="syllabus-section" id="quantitative">
+                <h3><i class="fas fa-calculator"></i> Quantitative Aptitude <button class="close-button" onclick="toggleSection('quantitative')">Close</button></h3>
+                <ol>
+                    <li>Numbers</li>
+                    <li>LCM and HCF</li>
+                    <li>Work and Wages</li>
+                    <li>Pipes and Cisterns</li>
+                    <li>Trains, Boats, and Streams</li>
+                    <li>Percentages</li>
+                    <li>Ratio Proportion and Partnership</li>
+                    <li>Mixtures and Alligation</li>
+                    <li>Algebra</li>
+                    <li>Average</li>
+                    <li>Age</li>
+                    <li>Profit and Loss</li>
+                    <li>Simple Interest</li>
+                    <li>Compound Interest</li>
+                    <li>Mensuration 2D</li>
+                    <li>Mensuration 3D</li>
+                    <li>Trigonometry & Height and Distances</li>
+                    <li>Progressions</li>
+                    <li>Logarithms</li>
+                    <li>Permutation and Combination</li>
+                    <li>Probability</li>
+                    <li>Geometry</li>
+                    <li>Clocks</li>
+                    <li>Calendars</li>
+                    <li>Coding-Decoding</li>
+                    <li>Race</li>
+                    <li>Simplification and Approximation</li>
+                </ol>
+            </div>
+
+            <div class="syllabus-section" id="verbal">
+                <h3><i class="fas fa-language"></i> Verbal Ability <button class="close-button" onclick="toggleSection('verbal')">Close</button></h3>
+                <ol>
+                    <li>Passage/Sentence Rearrangement</li>
+                    <li>Error Detection and Correction</li>
+                    <li>Fill in the Blanks</li>
+                    <li>Comprehension Passages</li>
+                    <li>Cloze test</li>
+                    <li>Jumbled words/Paragraphs</li>
+                    <li>Antonyms and synonyms</li>
+                    <li>Idioms and phrases</li>
+                    <li>Vocabulary and grammar</li>
+                    <li>One word Substitution</li>
+                </ol>
+            </div>
+
+            <div class="syllabus-section" id="logical">
+                <h3><i class="fas fa-puzzle-piece"></i> Logical Reasoning <button class="close-button" onclick="toggleSection('logical')">Close</button></h3>
+                <ol>
+                    <li>Series: Missing Numbers, Odd One Out</li>
+                    <li>Data Sufficiency</li>
+                    <li>Assumptions and Conclusions, Courses of Action</li>
+                    <li>Puzzles</li>
+                    <li>Syllogism</li>
+                    <li>Cubes</li>
+                    <li>Alphanumeric series</li>
+                    <li>Reasoning Analogy</li>
+                    <li>Blood Relations</li>
+                    <li>Calendars</li>
+                    <li>Clocks</li>
+                    <li>Dices</li>
+                    <li>Deductive Reasoning/Statement Analysis</li>
+                </ol>
+            </div>
+
+            <div class="syllabus-section" id="core-technical">
+                <h3><i class="fas fa-microchip"></i> Core Technical Subjects <button class="close-button" onclick="toggleSection('core-technical')">Close</button></h3>
+                <ol>
+                    <li>Computer Networks</li>
+                    <li>Cloud Computing</li>
+                    <li>DBMS</li>
+                    <li>Operating Systems</li>
+                    <li>Object-Oriented Programming Systems (OOPS)</li>
+                    <li>Structured Query Language (SQL)</li>
+                </ol>
+            </div>
+
+            <div class="syllabus-section" id="coding">
+                <h3><i class="fas fa-code"></i> Coding <button class="close-button" onclick="toggleSection('coding')">Close</button></h3>
+                <ol>
+                    <li><strong>Programming Basics</strong>
+                        <ul>
+                            <li>Variables and Data Types</li>
+                            <li>Operators (Arithmetic, Relational, Logical)</li>
+                            <li>Input/Output (Console, File)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Control Structures</strong>
+                        <ul>
+                            <li>Conditionals (if, else, switch)</li>
+                            <li>Loops (for, while, do-while)</li>
+                            <li>Flow Control (break, continue)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Functions</strong>
+                        <ul>
+                            <li>Defining Functions</li>
+                            <li>Parameters and Return Values</li>
+                            <li>Recursion</li>
+                        </ul>
+                    </li>
+                    <li><strong>Data Structures</strong>
+                        <ul>
+                            <li>Arrays/Lists</li>
+                            <li>Strings</li>
+                            <li>Stacks, Queues</li>
+                            <li>Linked Lists</li>
+                            <li>Hash Maps (Dictionaries)</li>
+                            <li>Sets</li>
+                        </ul>
+                    </li>
+                    <li><strong>Algorithms</strong>
+                        <ul>
+                            <li>Searching (Linear, Binary)</li>
+                            <li>Sorting (Bubble, Merge, Quick)</li>
+                            <li>Time Complexity (Big O notation)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Object-Oriented Programming (OOP)</strong>
+                        <ul>
+                            <li>Classes and Objects</li>
+                            <li>Inheritance</li>
+                            <li>Polymorphism</li>
+                            <li>Encapsulation</li>
+                        </ul>
+                    </li>
+                    <li><strong>Advanced Data Structures</strong>
+                        <ul>
+                            <li>Trees (Binary Tree, Binary Search Tree)</li>
+                            <li>Graphs (BFS, DFS)</li>
+                            <li>Heaps (Min-Heap, Max-Heap)</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div id="page3">
+            <h2>Analysis of the Top Companies in Detail</h2>
+            <div class="company-section">
+                <div class="company" onclick="showCompanyDetails('tcs')">
+                    <h3>TCS</h3>
+                </div>
+                <div class="company" onclick="showCompanyDetails('accenture')">
+                    <h3>Accenture</h3>
+                </div>
+                <div class="company" onclick="showCompanyDetails('capgemini')">
+                    <h3>Capgemini</h3>
+                </div>
+                <div class="company" onclick="showCompanyDetails('ashokleyland')">
+                    <h3>Ashok Leyland</h3>
+                </div>
+                <div class="company" onclick="showCompanyDetails('LTIMindtree')">
+                    <h3>LTIMindtree</h3>
+                </div>
+                <div class="company" onclick="showCompanyDetails('infosys')">
+                    <h3>Infosys</h3>
+                </div>
+                <div class="company" onclick="showCompanyDetails('wipro')">
+                    <h3>Wipro</h3>
+                </div>
+                <div class="company" onclick="showCompanyDetails('hexaware')">
+                    <h3>Hexaware</h3>
+                </div>
+                <div class="company" onclick="showCompanyDetails('cognizant')">
+                    <h3>Cognizant</h3>
+                </div>
+                <div class="company" onclick="showCompanyDetails('deloitte')">
+                    <h3>Deloitte</h3>
+                </div>
+                <div class="company" onclick="showCompanyDetails('oracle')">
+                    <h3>Oracle</h3>
+                </div>
+                <div class="company" onclick="showCompanyDetails('saplabs')">
+                    <h3>SAP Labs</h3>
+                </div>
+                <div class="company" onclick="showCompanyDetails('cisco')">
+                    <h3>Cisco</h3>
+                </div>
+            </div>
+            <div id="company-details-container">
+                <div id="company-details">
+                    <button onclick="closeCompanyDetails()" style="float: right; cursor: pointer;">Close</button>
+                    <div class="section" id="company-content">
+                        <h3>Company Details</h3>
+                        <div id="company-details-content">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page4">
+            <h2>About the Placement Preparation Portal</h2>
+            <p>This information regarding the exam pattern and syllabus is based on current trends. However, please note that the exam pattern may vary depending on the requirements and policies of individual companies at the time of your placement. The syllabus, however, is expected to remain largely the same, with any changes likely to involve the addition of new topics rather than the removal of existing ones. We recommend regularly checking official sources for the most up-to-date information regarding any changes to the exam pattern</p>
+        </div>
+
+    </div>
+
+    <script src="Script.js"></script>
+</body>
+</html>
